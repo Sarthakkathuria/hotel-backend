@@ -12,7 +12,7 @@ public class HotelInfo {
 	private String name;
 	private String description;
 	private int price;
-	private int review;
+	private double review;
 	private String url1;
 	private String url2;
 	private String url3;
@@ -22,7 +22,7 @@ public class HotelInfo {
 		super();
 	}
 	public HotelInfo(int id, String name, String description, String url1, String url2, String url3, String url4,
-			String url5,int price,int review) {
+			String url5,int price,double review) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -43,10 +43,10 @@ public class HotelInfo {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getReview() {
+	public double getReview() {
 		return review;
 	}
-	public void setReview(int review) {
+	public void setReview(double review) {
 		this.review = review;
 	}
 	public int getPrice() {
