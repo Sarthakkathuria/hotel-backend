@@ -25,13 +25,16 @@ public class FirstController {
 	public String home() {
 		return "index.jsp";
 	}
-	
+	@RequestMapping("/final")
+	public String finalp(){
+		return "final.jsp";
+	}
 	@RequestMapping("/allhotels")
 	public String hotels(Model m) {
 		List<HotelCard>  ww = service.getAllCard();
 		System.out.println("all hotels");
 		m.addAttribute("hotels", ww);
-		return "hotels.jsp";
+		return "allhotels.jsp";
 	}
 	
 	@RequestMapping("/hotel")
@@ -43,6 +46,7 @@ public class FirstController {
 		model.setViewName("hotels.jsp");
 		return model;
 	}
+	
 	@RequestMapping("/addnew")
 	public String addnew() {
 		System.out.println("add new hotel");

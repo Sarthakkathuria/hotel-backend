@@ -1,15 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-  	.mainHeader{
+<meta charset="ISO-8859-1">
+<title>Hotels</title>
+<style type="text/css"> 
+/* * { margin:0; padding:0; box-sizing:border-box; } */
+
+.mainHeader{
     background-color: rgb(237, 106, 241);
-    height: 400px;
+    height: 180px;
 }
 .header{
     /* display:flex;
@@ -131,135 +134,80 @@
     padding-left:12px;
     font-weight:bold;
 }
-
-.banner1{
-    position: relative;
-    height: 700px;
-    width: 1536px;
-    display: flex;
-}
-.banner1>img{
-    justify-content: center;
-    margin-right: 40px;
-    /* margin-top: 25px; */
-    /* border-radius: 25px; */
-}
-.banner-txt{
-    position: absolute;
-    
-    top: 30%;
-    width: 100%; 
-    
-    text-align: center;
-    
-    /* margin-left: 150px; */
-}
-.bttn1{
-    width: 150px;
-    height: 45px;
-    border-radius: 19px;
-    background-color: white;
-    cursor: pointer;
-    font-size: large;
-    font-weight: bold;
-    color: tomato;
-    /* background: linear-gradient(90deg, rgb(111, 1, 156) 0%, rgb(198, 1, 126) 135.12%); */
-}
-.banner2>p{
-    font-size: 40px;
-    font-weight: bold;
-    margin-top: -180px;
-    margin-left: 90px;
-    
-}
-.cttn{
-    display:flex;
-    margin-left: 140px;
-    border-radius: 15px;
-}
-.container{
-    margin-right: 25px;
-    background-color :rgb(217, 59, 48);
-    border-radius: 18px;
-    /* border: solid black 2px; */
-    
-}
-.container>a>img{
-    border-radius: 18px;
-    cursor: pointer;
-}
-.p1{
-    color:white;
-    font-size: 25px;
-    font-weight: bolder;
-    margin-left: 20px;
-    margin-top: 9px;
-}
-.p2{
-    color:white;
-    font-size: 17px;
-    margin-left: 20px;
-    margin-top: -9px;
-}
-
-/* sfdfsdfsdfsd */
-.text{
-    float: left; 
-    margin: 25px;
+body{
+margin:0; 
+padding:0; 
+font-weight: bold;
 } 
+.head{
+background:#262626; 
 
-.texts,.tre{
-    display: inline-block; 
-    vertical-align: middle; 
-    
+}
+.container
+{
+width:1280px; 
+margin: 70px auto 0;  
+display:flex; 
+flex-direction:row; 
+flex-wrap:wrap;
+}
+.container .box
+{ 
+position: relative; 
+ 
+margin :10px; 
+box-sizing:border-box; 
+display:inline-block;
 } 
+.container.box.ibox
+{ 
+position: relative; 
+overflow: Shidden;
+} 
+.container .box .ibox img
+{
+max-width:100%; 
+max-height:100%;
+transition: transform .2s; 
+}  
+.container .box:HOVER .ibox img{
 
-.ter{
-    display:inline-block; 
-    vertical-align: middle;
-    margin: 20px;}
+	transform:scale(1.05);
+} 
+.container .box .det{ 
+position: absolute; 
+top:10px; 
+left: 10px; 
+bottom: 10px; 
+right: 10px; 
+background:rgba(0,0,0,.8);  
+transform:scaleY(0); 
+transition:transform .5s;
+}  
+.container .box:hover .det{ 
+transform:scaleY(1);
+}
+.container .box .det .con{ 
+position: absolute; 
+top:50%; 
+transform:translateY(-50%); 
+text-align:center;  
+padding:30px;
+color:#fff;
 
-    
-    .fa {
-        padding: 20px;
-        font-size: 30px;
-        width: 0px;
-        text-align: center;
-        text-decoration: none;
-      }
-      
-      /* Add a hover effect if you want */
-      .fa:hover {
-        opacity: 0.7;
-      }
-      
-      /* Set a specific color for each brand */
-      
-      /* Facebook */
-      .fa-facebook {
-       
-        color:black;
-      }
-      
-      .fa-twitter {
-        
-        color:black;
-      }
-      .js{
-        margin-left: 150px;
-      }
-      .footer{
-        border-top: solid gray 2px;
-        margin-top: 30px;
-        padding-left: 250px;
-      }
+} 
+.container .box .det .con h1,h2,h4,h3,h5{
+margin: 0;
+padding: 0; 
+font-size: 50px; 
+color: silver;
+background:#262626;
+font-family: fantasy;
+}
 
-
-
-  </style>
+</style>
 </head>
 <body>
-	<div>
 <div class = "mainHeader">
 <div class="header">
     <div class="header-left">
@@ -302,104 +250,24 @@
             </div>
             <button class= "bttn">Airport taxis</button></div>
     </div>
-    <div class="headerThree">
-        <h1 class="h1">Find your next stay</h1>
-        <h3 class = "h3">Search deals on hotels, homes and much more...</h3>
-    </div>
-</div>
-</div>
-
-
-<div>
-    <div class="banner1"> 
-        <img src="https://a0.muscache.com/im/pictures/24535835-bd90-4c69-bfdb-cc968e5af4df.jpg" width ="1500px" height="500px" layout="fill" objectFit="cover">
-    <div class="banner-txt">
-        <h3 style = "color: white; font-size: 50px;">Not Sure where to go? Perfect</h3>
-        <a href="http://localhost:8081/allhotels"><button class="bttn1">I'm flexible</button></a>
-    </div>
-    </div>
-    <div class="banner2">
-        <p>Inspiration for your next trip</p>
-        <div class="cttn">
-            <div class="container">
-            <a href="http://localhost:8081/allhotels"> 
-              <img src="https://a0.muscache.com/im/pictures/53a3328b-4090-4b5b-928f-9db04c9f3361.jpg?im_w=320" height = "350px" width="300px">  
-            </a>
-              <div>
-                <p class="p1">New Delhi</p>
-                <p class="p2">45-minute drive</p>
-              </div>  
-            </div>
-            <div class="container"> 
-            	<a href="http://localhost:8081/allhotels">
-                <img src="https://a0.muscache.com/im/pictures/52b76ef5-00a6-4dc5-b21e-9fd6368c825f.jpg?im_w=320" height = "350px" width="300px">  
-                </a>
-                <p class="p1">Jaipur</p>
-                <p class="p2">3.5-hour drive</p>
-              </div>
-              <div class="container"> 
-              <a href="http://localhost:8081/allhotels">
-                <img src="https://a0.muscache.com/im/pictures/1bbded7d-51fe-49b8-b85d-e458b3e218bf.jpg?im_w=320" height = "350px" width="300px">  
-                </a>
-                <p class="p1">Gurugram</p>
-                <p class="p2">15-minute drive</p>
-              </div>
-              <div class="container"> 
-              <a href="http://localhost:8081/allhotels">
-                <img src="https://a0.muscache.com/im/pictures/03bb6d0a-5ccb-47e1-83fc-b7ad87e7f8c3.jpg?im_w=320" height = "350px" width="300px">  
-                </a>
-                <p class="p1">Manali</p>
-                <p class="p2">7-hour drive</p>
-              </div>
-        </div>
-        
-    </div>
-    <div class="footer">
-        <div class="text"> 
-
-            <h3><b>Support</b></h3> 
-               Help Centre <br><br>
-               Safety information<br><br>
-               Cancellation option<br><br>
-               Our Covid-19 Response<br><br> 
-               Supporting people with disabilities<br><br>
-               Report a neighbourhood concern<br><br>
-        </div>
-        <div class="text"> 
-        
-                <h3><b>Community</b></h3> 
-                   disaster relief housing<br><br>
-                  Support Afghan refguees<br><br>
-                   Celeberating diversity <br>& belonging<br><br>
-                   Combating discrimination<br><br> 
-                   
-        </div>
-        <div class="text"> 
-        
-                    <h3><b>Hosting</b></h3> 
-                       Protection for Hosts <br><br>
-                       Explore hosting resource<br><br>
-                       Visit our community forum<br><br>
-                       How to host responsibly<br><br> 
-                     
-        </div>
-        <div class="text"> 
-        
-                        <h3><b>About</b></h3> 
-                           Newsroom<br><br>
-                          Learn about new features<br><br>
-                           Letter from our founders<br><br>
-                           Careers<br><br> 
-                           Investors<br><br>
-                           Luxe<br><br>
-        </div> 
-        
-        
-    </div>
     
 </div>
+<div class="container"> 
 
-
-
+	<c:forEach items="${hotels}" var= "ii">
+	<div class="box">
+	<a href = "http://localhost:8081/hoteldetails?name=${ii.name}" >
+	<div class="ibox">
+	 <img src="${ii.img}"
+     height="230" width="245" style="border-radius: 23px"> 
+     </a>
+    <figcaption><b>${ii.name}</b></figcaption>
+    <figcaption>${ii.distance} kilometers away</figcaption>
+    <figcaption> Rs. ${ii.price} /night</figcaption>
+	</div>
+	
+	</div>
+	</c:forEach>
+</div>
 </body>
 </html>
