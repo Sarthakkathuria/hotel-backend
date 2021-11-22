@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,9 @@ import com.example.demo.service.HotelInfoService;
 
 @Controller
 public class SecondController {
+	
+	private static final Logger log = Logger.getLogger(SecondController.class);
+	
 	@Autowired
 	private HotelInfoService service;
 	
@@ -21,15 +25,15 @@ public class SecondController {
 	private ModelAndView detils(@RequestParam("name") String name) {
 		HotelInfo  wq = service.getByName(name); // I have to change this and make this in service
 		ModelAndView model = new ModelAndView();
-		System.out.println("search by name");
-		System.out.println(name);
+		log.info("Search hotel by name");
+		log.info(name);
 		model.addObject("ww", wq);
 		model.setViewName("details.jsp");
 		return model;
 	}
 	@RequestMapping("/addneww")
 	public String addnew() {
-		System.out.println("add new hotel");
+		log.info("add new hotel");
 		return "addform2.jsp";
 	}
 	

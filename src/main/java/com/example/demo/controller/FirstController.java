@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,22 +18,24 @@ import com.example.demo.service.HotelService;
 
 @Controller
 public class FirstController {
-
+	private static final Logger log = Logger.getLogger(FirstController.class);
 	@Autowired
 	private HotelService service;
 	
 	@RequestMapping("/")
 	public String home() {
+		log.info("this is index page");
 		return "index.jsp";
 	}
 	@RequestMapping("/final")
 	public String finalp(){
+		log.info("this is final page");
 		return "final.jsp";
 	}
 	@RequestMapping("/allhotels")
 	public String hotels(Model m) {
+		log.info("all hotels");
 		List<HotelCard>  ww = service.getAllCard();
-		System.out.println("all hotels");
 		m.addAttribute("hotels", ww);
 		return "allhotels.jsp";
 	}
@@ -41,7 +44,7 @@ public class FirstController {
 	public ModelAndView getHotel(@RequestParam("location") String location){
 		List<HotelCard>  wq = service.getCardByLocation(location); // I have to change this and make this in service
 		ModelAndView model = new ModelAndView();
-		System.out.println("search by location");
+		log.info("Search by location");
 		model.addObject("wq", wq);
 		model.setViewName("hotels.jsp");
 		return model;
@@ -49,13 +52,14 @@ public class FirstController {
 	
 	@RequestMapping("/addnew")
 	public String addnew() {
-		System.out.println("add new hotel");
+		log.info("add new hotel");
 		return "addform.jsp";
 	}
 	
 	@RequestMapping(value ="/save",method = RequestMethod.POST)
 	public ModelAndView saveCard(HotelCard card) {
 		service.saveOrUpdate(card);
+		log.info("hotel saved");
 		return new ModelAndView("redirect:/addnew");
 	}
 	
