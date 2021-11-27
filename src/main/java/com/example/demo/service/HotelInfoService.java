@@ -5,7 +5,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.Model.HotelInfo;
+
+import com.example.demo.Model.HotelInfoDTO;
 import com.example.demo.repository.HotelInfoRepository;
 
 @Service
@@ -15,8 +16,8 @@ public class HotelInfoService implements HotelInfoServiceInterface{
 	private HotelInfoRepository repo;
 	
 	@Override
-	public void saveOrUpdate(HotelInfo card) {
-		HotelInfo cc = new HotelInfo();
+	public void saveOrUpdate(HotelInfoDTO card) {
+		HotelInfoDTO cc = new HotelInfoDTO();
 		cc.setId(card.getId());
 		cc.setName(card.getName());
 		cc.setDescription(card.getDescription());
@@ -32,9 +33,9 @@ public class HotelInfoService implements HotelInfoServiceInterface{
 	}
 
 	@Override
-	public HotelInfo getCardById(int id) {
-		Optional<HotelInfo> list = repo.findById(id);
-		HotelInfo f = null;
+	public HotelInfoDTO getCardById(int id) {
+		Optional<HotelInfoDTO> list = repo.findById(id);
+		HotelInfoDTO f = null;
 		if (list.isPresent()) {
 			f = list.get();
 			
@@ -43,7 +44,7 @@ public class HotelInfoService implements HotelInfoServiceInterface{
 	}
 
 	@Override
-	public HotelInfo getByName(String name) {
+	public HotelInfoDTO getByName(String name) {
 		return repo.findByName(name);
 	}
 

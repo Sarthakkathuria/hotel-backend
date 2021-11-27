@@ -1,13 +1,6 @@
 package com.example.demo.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="hotel_info")
-public class HotelInfo {
-	@Id
+public class HotelInfoDTO {
 	private int id;
 	private String name;
 	private String description;
@@ -18,11 +11,7 @@ public class HotelInfo {
 	private String url3;
 	private String url4;
 	private String url5;
-	public HotelInfo() {
-		super();
-	}
-	
-	public HotelInfo(int id, String name, String description, int price, double review, String url1, String url2,
+	public HotelInfoDTO(int id, String name, String description, int price, double review, String url1, String url2,
 			String url3, String url4, String url5) {
 		super();
 		this.id = id;
@@ -36,26 +25,8 @@ public class HotelInfo {
 		this.url4 = url4;
 		this.url5 = url5;
 	}
-
-
-
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	public double getReview() {
-		return review;
-	}
-	public void setReview(double review) {
-		this.review = review;
-	}
-	public int getPrice() {
-		return price;
-	}
-	public void setPrice(int price) {
-		this.price = price;
+	public HotelInfoDTO() {
+		super();
 	}
 	public int getId() {
 		return id;
@@ -69,7 +40,24 @@ public class HotelInfo {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public double getReview() {
+		return review;
+	}
+	public void setReview(double review) {
+		this.review = review;
+	}
 	public String getUrl1() {
 		return url1;
 	}
@@ -100,12 +88,10 @@ public class HotelInfo {
 	public void setUrl5(String url5) {
 		this.url5 = url5;
 	}
-	
-	public HotelInfoDTO convertToDTO(HotelInfo info) {
-		return new HotelInfoDTO(info.getId(),info.getName(),info.getDescription(),info.getPrice()
+	public HotelInfo convertToEntity(HotelInfoDTO info) {
+		return new HotelInfo(info.getId(),info.getName(),info.getDescription(),info.getPrice()
 				,info.getReview(),info.getUrl1(),info.getUrl2(),info.getUrl3()
 				,info.getUrl4(),info.getUrl5());
 	}
-
-
+	
 }

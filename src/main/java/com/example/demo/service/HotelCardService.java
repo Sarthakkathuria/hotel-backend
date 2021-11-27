@@ -2,11 +2,11 @@ package com.example.demo.service;
 
 import java.util.List;
 
-import com.example.demo.Model.HotelCard;
+import com.example.demo.Model.HotelCardDTO;
 
 public interface HotelCardService {
-	public List<HotelCard> getAllCard();
-	public void saveOrUpdate(HotelCard card);
-	public HotelCard getCardById(int id);
-	public List<HotelCard> getCardByLocation(String location);
+	public List<HotelCardDTO> getAllCard();
+	public void saveOrUpdate(HotelCardDTO card);
+	public HotelCardDTO getCardById(int id);
+	public List<HotelCardDTO> getCardByLocation(String location);
 }

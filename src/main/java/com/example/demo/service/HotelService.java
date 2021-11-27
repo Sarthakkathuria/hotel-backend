@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.Model.HotelCard;
+import com.example.demo.Model.HotelCardDTO;
 import com.example.demo.repository.HotelCardRepository;
 
 @Service
@@ -16,13 +17,13 @@ public class HotelService implements HotelCardService{
 	private HotelCardRepository repo;
 
 	@Override
-	public List<HotelCard> getAllCard() {
+	public List<HotelCardDTO> getAllCard() {
 		return repo.findAll();
 	}
 
 	@Override
-	public void saveOrUpdate(HotelCard card) {
-		HotelCard cc = new HotelCard();
+	public void saveOrUpdate(HotelCardDTO card) {
+		HotelCardDTO cc = new HotelCardDTO();
 		cc.setId(card.getId());
 		cc.setName(card.getName());
 		cc.setDistance(card.getDistance());
@@ -34,9 +35,9 @@ public class HotelService implements HotelCardService{
 	}
 
 	@Override
-	public HotelCard getCardById(int id) {
-		Optional<HotelCard> list = repo.findById(id);
-		HotelCard f = null;
+	public HotelCardDTO getCardById(int id) {
+		Optional<HotelCardDTO> list = repo.findById(id);
+		HotelCardDTO f = null;
 		if (list.isPresent()) {
 			f = list.get();
 			
@@ -45,7 +46,7 @@ public class HotelService implements HotelCardService{
 	}
 
 	@Override
-	public List<HotelCard> getCardByLocation(String location) {
+	public List<HotelCardDTO> getCardByLocation(String location) {
 		return repo.findByLocation(location);
 	}
 

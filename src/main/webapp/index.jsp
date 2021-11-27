@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<title>Airbnb</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -312,7 +313,7 @@
 
 <div>
     <div class="banner1"> 
-        <img src="https://a0.muscache.com/im/pictures/24535835-bd90-4c69-bfdb-cc968e5af4df.jpg" width ="1500px" height="500px" layout="fill" objectFit="cover">
+        <img src="https://a0.muscache.com/im/pictures/24535835-bd90-4c69-bfdb-cc968e5af4df.jpg" alt="G" width ="1500px" height="500px" layout="fill" objectFit="cover">
     <div class="banner-txt">
         <h3 style = "color: white; font-size: 50px;">Not Sure where to go? Perfect</h3>
         <a href="http://localhost:8081/allhotels"><button class="bttn1">I'm flexible</button></a>
@@ -323,7 +324,7 @@
         <div class="cttn">
             <div class="container">
             <a href="http://localhost:8081/allhotels"> 
-              <img src="https://a0.muscache.com/im/pictures/53a3328b-4090-4b5b-928f-9db04c9f3361.jpg?im_w=320" height = "350px" width="300px">  
+              <img src="https://a0.muscache.com/im/pictures/53a3328b-4090-4b5b-928f-9db04c9f3361.jpg?im_w=320" alt="G" height = "350px" width="300px">  
             </a>
               <div>
                 <p class="p1">New Delhi</p>
@@ -332,21 +333,21 @@
             </div>
             <div class="container"> 
             	<a href="http://localhost:8081/allhotels">
-                <img src="https://a0.muscache.com/im/pictures/52b76ef5-00a6-4dc5-b21e-9fd6368c825f.jpg?im_w=320" height = "350px" width="300px">  
+                <img src="https://a0.muscache.com/im/pictures/52b76ef5-00a6-4dc5-b21e-9fd6368c825f.jpg?im_w=320" alt="G" height = "350px" width="300px">  
                 </a>
                 <p class="p1">Jaipur</p>
                 <p class="p2">3.5-hour drive</p>
               </div>
               <div class="container"> 
               <a href="http://localhost:8081/allhotels">
-                <img src="https://a0.muscache.com/im/pictures/1bbded7d-51fe-49b8-b85d-e458b3e218bf.jpg?im_w=320" height = "350px" width="300px">  
+                <img src="https://a0.muscache.com/im/pictures/1bbded7d-51fe-49b8-b85d-e458b3e218bf.jpg?im_w=320" alt="G" height = "350px" width="300px">  
                 </a>
                 <p class="p1">Gurugram</p>
                 <p class="p2">15-minute drive</p>
               </div>
               <div class="container"> 
               <a href="http://localhost:8081/allhotels">
-                <img src="https://a0.muscache.com/im/pictures/03bb6d0a-5ccb-47e1-83fc-b7ad87e7f8c3.jpg?im_w=320" height = "350px" width="300px">  
+                <img src="https://a0.muscache.com/im/pictures/03bb6d0a-5ccb-47e1-83fc-b7ad87e7f8c3.jpg?im_w=320" alt="G" height = "350px" width="300px">  
                 </a>
                 <p class="p1">Manali</p>
                 <p class="p2">7-hour drive</p>

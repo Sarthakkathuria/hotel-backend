@@ -3,7 +3,7 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Hotels</title>
@@ -258,7 +258,7 @@ font-family: fantasy;
 	<div class="box">
 	<a href = "http://localhost:8081/hoteldetails?name=${ii.name}" >
 	<div class="ibox">
-	 <img src="${ii.img}"
+	 <img src="${ii.img}" alt="G"
      height="230" width="245" style="border-radius: 23px"> 
      </a>
     <figcaption><b>${ii.name}</b></figcaption>

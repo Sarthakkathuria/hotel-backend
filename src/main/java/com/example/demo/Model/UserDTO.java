@@ -1,28 +1,19 @@
 package com.example.demo.Model;
 
-import java.io.Serializable;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
-public class User implements Serializable{
-	private static final long serialVersionUID = -2048969305116877823L;
-	@Id
+public class UserDTO {
 	private int id;
 	private String username;
 	private String password;
 	private String role;
-	
-	public User() {
-		super();
-	}
-	public User(int id, String username, String password, String role) {
+	public UserDTO(int id, String username, String password, String role) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.role = role;
+	}
+	public UserDTO() {
+		super();
 	}
 	public int getId() {
 		return id;
@@ -48,8 +39,8 @@ public class User implements Serializable{
 	public void setRole(String role) {
 		this.role = role;
 	}
-	public UserDTO convertToDTO(User user) {
-		return new UserDTO(user.getId(),user.getUsername(),user.getPassword(),user.getRole());
-	}
 	
+	public User convertToEntity(UserDTO dto) {
+		return new User(dto.getId(),dto.getUsername(),dto.getPassword(),dto.getRole());
+	}
 }

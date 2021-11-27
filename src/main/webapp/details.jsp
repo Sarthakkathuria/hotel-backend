@@ -3,7 +3,7 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -349,7 +349,7 @@ img{
     </div>
     <div class = "header-right">
         <p class="ptag">INR</p>
-        <img class="language-img" src="https://cf.bstatic.com/static/img/flags/new/48-squared/in/20aa535a5d3c505dd02fea275ed1a36c0fb1fe08.png" alt="">
+        <img class="language-img" src="https://cf.bstatic.com/static/img/flags/new/48-squared/in/20aa535a5d3c505dd02fea275ed1a36c0fb1fe08.png" alt="G">
         <button class = "button bb1">List Your Property</button>
         <button class="button">Register</button>
         <button class="button">Sign in</button>
@@ -388,17 +388,17 @@ img{
 </div>
 <div class="row">
     <div class="col-sm-6">
-        <p><img src="https://a0.muscache.com/im/pictures/32a68404-8ed2-48a9-98f8-b9ad15a25d41.jpg" style="width:100%" height="350px"></p>
+        <p><img src="https://a0.muscache.com/im/pictures/32a68404-8ed2-48a9-98f8-b9ad15a25d41.jpg" alt="G" style="width:100%" height="350px"></p>
     
     </div>
     <div class="col-sm-3">
-        <img src="https://a0.muscache.com/im/pictures/db5d08ac-253d-426b-b55b-7b4a59ffff0a.jpg" style="width:100%" height="140px"><br><br>
-       <img src="https://a0.muscache.com/im/pictures/2fc52583-3114-4ca6-8092-bf318f3768b4.jpg" style="width:100%" height="140px">
+        <img src="https://a0.muscache.com/im/pictures/db5d08ac-253d-426b-b55b-7b4a59ffff0a.jpg" alt="G" style="width:100%" height="140px"><br><br>
+       <img src="https://a0.muscache.com/im/pictures/2fc52583-3114-4ca6-8092-bf318f3768b4.jpg" alt="G" style="width:100%" height="140px">
     
     </div>
     <div class="col-sm-3">
-            <img src="https://a0.muscache.com/im/pictures/2e091efb-9fb5-42a3-985c-a19fb0803abb.jpg" style="width:100%" height="140px"><br><br>
-        <img src="https://a0.muscache.com/im/pictures/db5d08ac-253d-426b-b55b-7b4a59ffff0a.jpg" style="width:100%" height="140px">
+            <img src="https://a0.muscache.com/im/pictures/2e091efb-9fb5-42a3-985c-a19fb0803abb.jpg" alt="G" style="width:100%" height="140px"><br><br>
+        <img src="https://a0.muscache.com/im/pictures/db5d08ac-253d-426b-b55b-7b4a59ffff0a.jpg" alt="G" style="width:100%" height="140px">
     </div>
   </div>
 </div>
@@ -410,7 +410,7 @@ img{
             <p>5 guests . 2 bedrooms . 3 beds . 2 bathrooms</p>
          </div>
          <div class="left-first-right">
-            <img src="https://a0.muscache.com/im/pictures/user/eb0faadb-d81d-4f28-8ed6-8fe3f44aa855.jpg" height="55px" width="55px" >
+            <img src="https://a0.muscache.com/im/pictures/user/eb0faadb-d81d-4f28-8ed6-8fe3f44aa855.jpg" alt="G" height="55px" width="55px" >
          </div>
 
         </div>

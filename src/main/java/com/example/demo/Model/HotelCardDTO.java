@@ -1,20 +1,13 @@
 package com.example.demo.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
-public class HotelCard {
-	
-	@Id
-	
+public class HotelCardDTO {
 	private int id;
 	private String name;
 	private int distance;
 	private String location;
 	private int price;
 	private String img;
-	public HotelCard(int id, String name, int distance, String location, int price,String img) {
+	public HotelCardDTO(int id, String name, int distance, String location, int price, String img) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -22,26 +15,8 @@ public class HotelCard {
 		this.location = location;
 		this.price = price;
 		this.img = img;
-		
 	}
-	
-	public String getImg() {
-		return img;
-	}
-
-	public void setImg(String img) {
-		this.img = img;
-	}
-
-	public String getLocation() {
-		return location;
-	}
-
-	public void setLocation(String location) {
-		this.location = location;
-	}
-
-	public HotelCard() {
+	public HotelCardDTO() {
 		super();
 	}
 	public int getId() {
@@ -62,16 +37,26 @@ public class HotelCard {
 	public void setDistance(int distance) {
 		this.distance = distance;
 	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
 	public int getPrice() {
 		return price;
 	}
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
-	public HotelCardDTO convertToDTO(HotelCard card) {
-		return new HotelCardDTO(card.getId(),card.getName(),card.getDistance(),card.getLocation()
-				,card.getPrice(),card.getImg());
+	public String getImg() {
+		return img;
 	}
-	
+	public void setImg(String img) {
+		this.img = img;
+	}
+	public HotelCard convertToEntity(HotelCardDTO dto) {
+		return new HotelCard(dto.getId(),dto.getName(),dto.getDistance()
+				,dto.getLocation(),dto.getPrice(),dto.getImg());
+	}
 }

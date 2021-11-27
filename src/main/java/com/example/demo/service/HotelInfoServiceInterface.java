@@ -1,11 +1,11 @@
 package com.example.demo.service;
 
 
-import com.example.demo.Model.HotelInfo;
+import com.example.demo.Model.HotelInfoDTO;
 
 public interface HotelInfoServiceInterface {
-	public void saveOrUpdate(HotelInfo card);
-	public HotelInfo getByName(String name);
-	public HotelInfo getCardById(int id);
+	public void saveOrUpdate(HotelInfoDTO card);
+	public HotelInfoDTO getByName(String name);
+	public HotelInfoDTO getCardById(int id);
 	
 }
